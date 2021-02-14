@@ -1,13 +1,13 @@
-package dev.tunks.taxitrips.mcsenyctrips;
+package dev.tunks.taxitrips;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class McseTaxitripServiceApplication {
+public class TaxitripServiceApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(McseTaxitripServiceApplication.class, args);
+		SpringApplication.run(TaxitripServiceApplication.class, args);
 	}
 
 }
