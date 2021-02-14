@@ -9,6 +9,7 @@ public class Location {
 	@Id
 	private String id;
 	@TextIndexed
+	
 	private String borough;
 	@TextIndexed
 	private String zone;
