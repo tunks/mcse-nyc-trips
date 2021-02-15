@@ -1,6 +1,9 @@
 package dev.tunks.taxitrips.service;
 
 import javax.annotation.Resource;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.mongodb.core.query.Term;
@@ -17,6 +20,8 @@ import dev.tunks.taxitrips.repositories.LocationRepository;
  */
 @Service
 public class LocationService implements QueryService<Location> {
+	private static final Logger logger = LoggerFactory.getLogger(LocationService.class);
+
 	@Resource
 	private LocationRepository locationRepository;
 
@@ -27,6 +32,16 @@ public class LocationService implements QueryService<Location> {
 
 	@Override
 	public Page<Location> findAll(QueryParams queryParams, Pageable pageable) {
+	    try {
+		   return findByQueryParams(queryParams, pageable);
+		}
+		catch(Exception ex){
+			logger.error(ex.getMessage());
+		}
+		return findAll(pageable);
+	}
+
+	private Page<Location> findByQueryParams(QueryParams queryParams, Pageable pageable) {
 		if (queryParams.getSearchTerm().isPresent()) {
 			return findAllBySearchTerm(queryParams.getSearchTerm().get(), pageable);
 		}
@@ -43,9 +58,15 @@ public class LocationService implements QueryService<Location> {
 	}
 
 	private Page<Location> findAllBySearchTerm(String searchTerm, Pageable pageable) {
-		TextCriteria criteria = new TextCriteria().caseSensitive(false).diacriticSensitive(false)
-				              .matching(new Term(searchTerm));
-		return locationRepository.findAllBy(criteria, pageable);
+		try {
+			TextCriteria criteria = new TextCriteria().caseSensitive(false).diacriticSensitive(false)
+					              .matching(new Term(searchTerm));
+			return locationRepository.findAllBy(criteria, pageable);
+		}
+		catch(Exception ex) {
+			logger.error(ex.getMessage());
+		}
+		return findAll(pageable);
 	}
 
 }
