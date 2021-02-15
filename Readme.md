@@ -101,3 +101,10 @@ Get trip metrics by day of week cost between two locations (Sunday to Saturday)
    dropoff_id - drop off location id <br />
    pickup_date  - pickup date (yyyy-MM-dd) <br/>
    dropoff_date  - drop off date (yyyy-MM-dd)
+   
+#### Future Improvements
+ - Use SwaggerUI to generate and document the API endpoints for users
+ - More comments
+ - Scalability: use of multiple applications instances behind a load balancer, database shading and replications
+ - CD/CD : Use container images and Kubernetes for automatic deployment
+ - Performance: caching of query results, pre-computation of the metrics by a separate application or job
