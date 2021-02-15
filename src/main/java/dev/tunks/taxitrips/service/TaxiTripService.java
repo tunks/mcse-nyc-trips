@@ -12,6 +12,7 @@ import org.springframework.data.mongodb.core.MongoTemplate;
 import org.springframework.data.mongodb.core.aggregation.Aggregation;
 import org.springframework.data.mongodb.core.query.Query;
 import org.springframework.stereotype.Service;
+import java.util.Collections;
 import java.util.List;
 import javax.annotation.Resource;
 import dev.tunks.taxitrips.model.TaxiTrip;
@@ -52,10 +53,16 @@ public class TaxiTripService implements QueryService<TaxiTrip> {
 	
 	public List<TripMetricsEntity> getTripMetrics(MetricsName name, QueryParams queryParams) 
 	{
-		QueryFactory queryFactory = new QueryFactory();
-		MetricsQuery<Aggregation> query = queryFactory.createMetricsQuery(name);
-		return mongoTemplate.aggregate(query.query(queryParams,Sort.unsorted()),TaxiTrip.class,TripMetricsEntity.class)
-				            .getMappedResults();
+		try {
+			QueryFactory queryFactory = new QueryFactory();
+			MetricsQuery<Aggregation> query = queryFactory.createMetricsQuery(name);
+			return mongoTemplate.aggregate(query.query(queryParams,Sort.unsorted()),TaxiTrip.class,TripMetricsEntity.class)
+					            .getMappedResults();
+		}
+		catch(Exception ex) {
+			logger.error(ex.getMessage());
+		}
+		return Collections.emptyList();
 	}
 	
 	private long count() {
