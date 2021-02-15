@@ -73,12 +73,12 @@ Search borough by search term
 Find trips by query parameters
 	
 	GET /api/trips?taxi_type=&pickup_id=&dropoff_id=&pickup_date=&dropoff_date 
-	GET http://nyctaxi.api.tunkz.net:8080/api/trips?taxi_type=&pickup_id=&dropoff_id=&pickup_date=&dropoff_date
+	GET http://nyctaxi.api.tunkz.net:8080/api/trips?....
 
 Find trips by query parameters with sort ascending option
 
 	GET /api/trips?axi_type=&pickup_id=&dropoff_id=&pickup_date=&dropoff_date=&sort=taxi_type,asc
-	GET http://nyctaxi.api.tunkz.net:8080/api/trips?axi_type=&pickup_id=&dropoff_id=&pickup_date=&dropoff_date=&sort=taxi_type,asc
+	GET http://nyctaxi.api.tunkz.net:8080/api/trips?axi_type=&pickup_id=...&sort=taxi_type,asc
 
 Get trip metrics by cost between two locations
 		
