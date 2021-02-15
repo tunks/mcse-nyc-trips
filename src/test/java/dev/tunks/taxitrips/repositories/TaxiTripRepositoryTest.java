@@ -19,15 +19,15 @@ import org.springframework.data.domain.PageRequest;
 import org.springframework.data.mongodb.core.MongoTemplate;
 import org.springframework.data.mongodb.core.query.Criteria;
 import org.springframework.data.mongodb.core.query.Query;
-
+import org.springframework.test.context.ActiveProfiles;
 import dev.tunks.taxitrips.TaxitripServiceApplication;
 import dev.tunks.taxitrips.model.TaxiTrip;
 import dev.tunks.taxitrips.util.DataUtil;
 import static dev.tunks.taxitrips.utils.DummyDataUtil.*;
 
-
 @SpringBootTest(classes = { TaxitripServiceApplication.class })
 @TestInstance(Lifecycle.PER_CLASS)
+@ActiveProfiles("dev")
 public class TaxiTripRepositoryTest {
 	@Resource
 	private TaxiTripRepository tripRepository;
