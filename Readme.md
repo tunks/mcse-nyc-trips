@@ -32,6 +32,7 @@ The batch data processor is in a separate Github repository [tunks/msce-tlc-data
 
 Junit5 unit cases are implemented as part of the code to test the required features
 
+The repository is integrated with Azure Dev Ops for CI/CD and the build is automatically after each commit
      
 ### Build
 Build the project with the test unit using Apache maven
