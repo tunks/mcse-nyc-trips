@@ -23,7 +23,7 @@ For this project, the data-processor service parsed and process the dataset for 
   - Total_amount: total amount charged for trip
   	
 - FHV Taxi Trips:
-  -  PULocationID: iid of pickup taxi location zone
+  -  PULocationID: id of pickup taxi location zone
   -  DOLocationID: id of drop off taxi location zone
   -  Pickup_datetime: passenger pickup off date and time
   -  DropOff_datetime: passenger drop off date and time
