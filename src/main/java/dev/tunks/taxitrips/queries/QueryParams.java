@@ -109,9 +109,11 @@ public class QueryParams {
 	public static QueryParamsBuilder newQueryParams() {
 		return new QueryParamsBuilder();
 	}
-	
-	
-	
+
+    /***
+     * QueryParamsBuilder class to create query params
+     *  
+     */	
 	public static class QueryParamsBuilder{
 		   private QueryParams queryParams;
 		   

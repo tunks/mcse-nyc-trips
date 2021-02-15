@@ -55,7 +55,7 @@ public class TaxiTripController {
      */
     @GetMapping(produces = MediaType.APPLICATION_JSON_VALUE)
 	public Page<TaxiTrip> findAllTrips(@RequestParam(name="taxi_type", required=false) String taxiType,
-			@RequestParam( name="pickup_id", required=false) String pickupLocationId,
+			@RequestParam(name="pickup_id", required=false) String pickupLocationId,
 			@RequestParam(name="dropoff_id", required=false) String dropoffLocationId,
 			@RequestParam(name="pickup_date", required=false) @DateTimeFormat(iso=DateTimeFormat.ISO.DATE) Date pickupDate, 
 			@RequestParam(name="dropoff_date", required=false) @DateTimeFormat(iso=DateTimeFormat.ISO.DATE) Date dropoffDate,
