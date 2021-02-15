@@ -43,11 +43,11 @@ To build the code locally
 #### Run
 1. Using java -jar command to start the application
 	
-	java -jar target/mcse-nyc-trips-0.0.1-SNAPSHOT.jar 
+		java -jar target/mcse-nyc-trips-0.0.1-SNAPSHOT.jar 
 
 2. OR, using Spring boot maven plugin
 	
-	mvn spring-boot:run
+		mvn spring-boot:run
 
 #### Restful API End points
 
