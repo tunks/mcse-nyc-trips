@@ -4,6 +4,7 @@ This is a coding challenge to develop a Restful API solution for NYC TLC taxi tr
 I have prioritized the implementation on certain key features and requirements due to the limited time constraint. I spent some time to understand the requirements and relevant data set required for the solution.
  
 ### Code Dependencies
+- Java 1.8+
 - Apache Maven 3.x
 - MongoDB database (Not required for Junit test cases, it uses an embedded MongoDB for execute test units)
 
@@ -29,5 +30,20 @@ I decoupled and implemented the data parsing and Restful API query operations in
 2. The data processing service uses Spring Batch for parsing and storing of the required data sets in Mongodb server.
 The batch data processor is in a separate Github repository [tunks/msce-tlc-data-processor](https://github.com/tunks/msce-tlc-data-processor).
 
-
 Junit5 unit cases are implemented as part of the code to test the required features
+
+###Endpoints
+
+### Build
+Build the project with the test unit using Apache maven
+
+ mvn clean install
+ 
+## Run
+1. Using java -jar command to start the application
+   
+   java -Dspring.profiles.active=azure -jar target/mcse-nyc-trips-0.0.1-SNAPSHOT.jar 
+
+2. OR, using Spring boot maven plugin
+
+   mvn spring-boot:run
