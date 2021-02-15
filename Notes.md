@@ -1,32 +1,31 @@
-### Restful API End points
+#### Source Data
+The data for trip trips for each month is available [](https://www1.nyc.gov/site/tlc/about/tlc-trip-record-data.page).
+For this project, the data-processor service parsed and process the dataset for January 2020.
 
-Find location zone by borough or zone 
-	GET /api/zones?borough=&zone=?
-
-Find location zone by borough or zone  with sort ascending option
-
-	GET /api/zones?borough=&zone=?sort=borough,asc 
-
-Search borough by search term
-
-	GET /api/zones/search?term=&size=10
-
-Find trips by query parameters
-	
-	GET /api/trips?taxi_type=&pickup_id=&dropoff_id=&pickup_date=&dropoff_date 
-
-Find trips by query parameters with sort ascending option
-
-	GET /api/trips?axi_type=&pickup_id=&dropoff_id=&pickup_date=&dropoff_date=&sort=taxi_type,asc
-
-Trip metrics
-		
-	GET /api/trips/metrics?name=&pickup_id=&dropoff_id=
-     
-##### Query parameters
-   taxi_type: type of taxi vehicle(green, yellow, rfv)<br />
-   pickup_id: pickup location id<br />
-   dropoff_id - drop off location id <br />
-   pickup_date  - pickup date (yyyy-MM-dd) <br/>
-   dropoff_date  - drop off date (yyyy-MM-dd)
-   
+ The following relevants fields from the dataset will be process.
+- Taxi Zone:
+  - LocationID: id of taxi trip zone
+  - borough: name of the borough for a taxi trip (a borough has multiple zones locations)
+  - Zone:  name of the taxi zone 
+  
+- Green Taxi Trips:
+  -  PULocationID: id of pickup taxi location zone
+  -  DOLocationID: id of drop off taxi location zone
+  -  lpep_pickup_datetime: passenger pickup off date and time
+  -  lpep_dropoff_datetime: passenger drop off date and time
+  -  Total_amount: total amount charged for trip
+  
+- Yellow Taxi Trips:
+  - PULocationID: id of pickup taxi location zone
+  - DOLocationID: id of drop off taxi location zone
+  - tpep_pickup_datetime: passenger pickup off date and time
+  - tpep_dropoff_datetime: passenger drop off date and time
+  - Total_amount: total amount charged for trip
+  	
+- FHV Taxi Trips:
+  -  PULocationID: iid of pickup taxi location zone
+  -  DOLocationID: id of drop off taxi location zone
+  -  Pickup_datetime: passenger pickup off date and time
+  -  DropOff_datetime: passenger drop off date and time
+  
+*Note: FHV dataset does not contain Total_Amount for metrics cost query*
