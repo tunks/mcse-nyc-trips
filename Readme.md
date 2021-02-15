@@ -104,7 +104,8 @@ Get trip metrics by day of week cost between two locations (Sunday to Saturday)
    dropoff_date  - drop off date (yyyy-MM-dd)
   
 #### Future Improvements
- - Use SwaggerUI to generate and document the API endpoints for users
+ - API Documentation: Implement SwaggerUI to generate and document the API endpoints for users
+ - UI: implement user interface to visualize the trips and metrics
  - More comments:
  - Exception handling
  - Scalability: use of multiple applications instances behind a load balancer, database shading and replications
