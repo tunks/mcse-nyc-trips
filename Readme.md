@@ -110,4 +110,4 @@ Get trip metrics by day of week cost between two locations (Sunday to Saturday)
  - CD/CD : Use container images and Kubernetes for automatic deployment
  - Performance: caching of query results, pre-computation of the metrics by a separate application or job
  
- Additional information for the data source[Notes.md](Notes.md)
+ Additional information for the data source [Notes.md](Notes.md).
