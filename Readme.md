@@ -50,6 +50,7 @@ Build the project with the test unit using Apache maven
 ### Restful API End points
 
 Find location zone by borough or zone 
+	
 	GET /api/zones?borough=&zone=?
 
 Find location zone by borough or zone  with sort ascending option
