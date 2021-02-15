@@ -51,37 +51,49 @@ To build the code locally
 
 #### Restful API End points
 
+The jar application is running in my Azure VM server with MongoBD server for user testing. 
+
+ - API Host - http://nyctaxi.api.tunkz.net:8080
+
 Find location zone by borough or zone 
 	
 	GET /api/zones?borough=&zone=?
+	GET http://nyctaxi.api.tunkz.net:8080/api/zones?borough=&zone=?
 
 Find location zone by borough or zone  with sort ascending option
 
 	GET /api/zones?borough=&zone=?sort=borough,asc 
+	GET http://nyctaxi.api.tunkz.net:8080/api/zones?borough=&zone=?sort=borough,asc
 
 Search borough by search term
 
 	GET /api/zones/search?term=&size=10
+	GET http://nyctaxi.api.tunkz.net:8080/api/zones/search?term=&size=10
 
 Find trips by query parameters
 	
 	GET /api/trips?taxi_type=&pickup_id=&dropoff_id=&pickup_date=&dropoff_date 
+	GET http://nyctaxi.api.tunkz.net:8080/api/trips?taxi_type=&pickup_id=&dropoff_id=&pickup_date=&dropoff_date
 
 Find trips by query parameters with sort ascending option
 
 	GET /api/trips?axi_type=&pickup_id=&dropoff_id=&pickup_date=&dropoff_date=&sort=taxi_type,asc
+	GET http://nyctaxi.api.tunkz.net:8080/api/trips?axi_type=&pickup_id=&dropoff_id=&pickup_date=&dropoff_date=&sort=taxi_type,asc
 
 Get trip metrics by cost between two locations
 		
 	GET /api/trips/metrics?name=cost&pickup_id=&dropoff_id=
+	GET http://nyctaxi.api.tunkz.net:8080/api/trips/metrics?name=cost&pickup_id=&dropoff_id=
 
 Get trip metrics by hour of day cost between two locations (1 to 23)
 		
 	GET /api/trips/metrics?name=hour&pickup_id=&dropoff_id=
+	GET http://nyctaxi.api.tunkz.net:8080/api/trips/metrics?name=hour&pickup_id=&dropoff_id=
 	
 Get trip metrics by day of week cost between two locations (Sunday to Saturday)
 		
 	GET /api/trips/metrics?name=day&pickup_id=&dropoff_id=
+	GET http://nyctaxi.api.tunkz.net:8080/api/trips/metrics?name=day&pickup_id=&dropoff_id=
      
 ##### Query parameters
    taxi_type: type of taxi vehicle(green, yellow, rfv)<br />
