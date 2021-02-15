@@ -20,12 +20,15 @@ import org.springframework.data.mongodb.core.query.Criteria;
 import org.springframework.data.mongodb.core.query.Query;
 import org.springframework.data.mongodb.core.query.Term;
 import org.springframework.data.mongodb.core.query.TextCriteria;
+import org.springframework.test.context.ActiveProfiles;
+
 import dev.tunks.taxitrips.TaxitripServiceApplication;
 import dev.tunks.taxitrips.model.Location;
 import static dev.tunks.taxitrips.utils.DummyDataUtil.*;
 
 @SpringBootTest(classes = {TaxitripServiceApplication.class})
 @TestInstance(Lifecycle.PER_CLASS)
+@ActiveProfiles("dev")
 public class LocationRepositoryTest {
 
 	@Resource
