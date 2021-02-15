@@ -25,10 +25,10 @@ I have prioritized the implementation on certain key features and requirements d
 One of major requirements of this challenge is to provide a solution for users to query relevant taxi trips information. 
 I decoupled and implemented the data parsing and Restful API query operations into two separate micro-services.  
 
-1. This Restful API service is implemented using Spring Boot and its provides Restful end points for users to find locations, trips and metrics.
+1. This Restful API service is implemented using Spring Boot and its provides Restful end points for users to find locations, trips and metrics. 
 
 2. The data processing service uses Spring Batch for parsing and storing of the required data sets in Mongodb server.
-The batch data processor is in a separate Github repository [tunks/msce-tlc-data-processor](https://github.com/tunks/msce-tlc-data-processor).
+The batch data processor is in a separate Github repository [tunks/msce-tlc-data-processor](https://github.com/tunks/msce-tlc-data-processor).  Two data models are used to store the data. Taxi trips data set is stored in "taxiTrip" collection in MongoDB. Location zone is stored in "location" collection in MongoDB. <br/>
 
 Junit5 unit cases are implemented as part of the code to test the required features
 
