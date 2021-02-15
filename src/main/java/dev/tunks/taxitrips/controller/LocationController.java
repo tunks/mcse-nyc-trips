@@ -28,6 +28,8 @@ public class LocationController {
      * GET /api/zones
      * GET /api/zones?borough=&zone=?
      * GET /api/zones?borough=&zone=&size=10
+     * GET /api/zones?sort=borough,asc
+     * 
      * Find all location zones by borough or zone with pageable option
      *  
      * @param borough
