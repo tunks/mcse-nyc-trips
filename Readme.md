@@ -37,8 +37,8 @@ Junit5 unit cases are implemented as part of the code to test the required featu
 Build the project with the test unit using Apache maven. The repository is integrated with Azure Dev Ops for CI/CD and the build is automatically after each commit
 
 To build the code locally
-
-   *mvn clean install*
+	
+	*mvn clean install*
  
 #### Run
 1. Using java -jar command to start the application
