@@ -21,7 +21,7 @@ Find trips by query parameters with sort ascending option
 
 Trip metrics
 		
-		GET /api/trips/metrics?name=&pickup_id=&dropoff_id=
+	GET /api/trips/metrics?name=&pickup_id=&dropoff_id=
      
 ##### Query parameters
    taxi_type: type of taxi vehicle(green, yellow, rfv)<br />
