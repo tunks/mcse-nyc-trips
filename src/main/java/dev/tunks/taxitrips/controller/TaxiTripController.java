@@ -62,12 +62,12 @@ public class TaxiTripController {
 			Pageable pageable)
     {
 		QueryParams queryParams = QueryParams.newQueryParams()
-				                            .setTaxiType(taxiType)
-							                .setPickupLocationId(pickupLocationId)
-							                .setDropoffLocationId(dropoffLocationId)
-							                .setPickupDate(pickupDate)
-							                .setDropoffDate(dropoffDate)
-							                .build();
+		                            .setTaxiType(taxiType)
+					                .setPickupLocationId(pickupLocationId)
+					                .setDropoffLocationId(dropoffLocationId)
+					                .setPickupDate(pickupDate)
+					                .setDropoffDate(dropoffDate)
+					                .build();
 		return taxiTripService.findAll(queryParams, pageable);
     }
 	
@@ -89,9 +89,9 @@ public class TaxiTripController {
 		Optional<MetricsName> metricsName = Optional.ofNullable(MetricsName.getName(name));
 		if(metricsName.isPresent()) {
 		    QueryParams queryParams = QueryParams.newQueryParams()
-							                .setPickupLocationId(pickupLocationId)
-							                .setDropoffLocationId(dropoffLocationId)
-							                .build();
+						                .setPickupLocationId(pickupLocationId)
+						                .setDropoffLocationId(dropoffLocationId)
+						                .build();
 		    return taxiTripService.getTripMetrics(metricsName.get(), queryParams);
 		}
 		else {
