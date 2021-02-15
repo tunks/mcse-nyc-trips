@@ -15,7 +15,6 @@ import dev.tunks.taxitrips.service.LocationService;
 /**
  * 
  *  Location zone controller to provide Rest Web API to query locations with parameters
- *  
  *  @author ebrimatunkara
  **/
 @RestController
@@ -40,7 +39,6 @@ public class LocationController {
 	public Page<Location> findAllLocations(@RequestParam(required=false, name="borough") String borough,
 			@RequestParam(required=false, name="zone") String zone, Pageable pageable){
 		QueryParams queryParams = QueryParams.newQueryParams().setBorough(borough).setZone(zone).build();
-         
 		return locationService.findAll(queryParams, pageable);
     }
 	
