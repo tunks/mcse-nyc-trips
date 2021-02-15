@@ -22,10 +22,20 @@ import dev.tunks.taxitrips.service.LocationService;
 @RequestMapping("/api/zones")
 public class LocationController {
 	private static final Logger logger = LoggerFactory.getLogger(LocationController.class);
-
     @Autowired
 	private LocationService locationService;
 	
+    /***
+     * GET /api/zones
+     * GET /api/zones?borough=&zone=?
+     * GET /api/zones?borough=&zone=&size=10
+     * Find all location zones by borough or zone with pageable option
+     *  
+     * @param borough
+     * @param zone
+     * @param page option
+     * @return page list of locations
+     */
     @GetMapping()
 	public Page<Location> findAllLocations(@RequestParam(required=false, name="borough") String borough,
 			@RequestParam(required=false, name="zone") String zone, Pageable pageable){
@@ -34,6 +44,15 @@ public class LocationController {
 		return locationService.findAll(queryParams, pageable);
     }
 	
+    /***
+     * GET /api/zones/search?term=&size=10
+     * Find locations by search terms or key words with pageable option
+     *  
+     * @param borough
+     * @param zone
+     * @param page option
+     * @return page list of locations
+     */
 	@GetMapping("/search")
 	public Page<Location> findLocationsByTerm(@RequestParam(name="term") String searchTerm, Pageable pageable)
 	{
