@@ -38,16 +38,16 @@ Build the project with the test unit using Apache maven. The repository is integ
 
 To build the code locally
 	
-	*mvn clean install*
+	mvn clean install
  
 #### Run
 1. Using java -jar command to start the application
-   
-   java -Dspring.profiles.active=azure -jar target/mcse-nyc-trips-0.0.1-SNAPSHOT.jar 
+	
+	java -jar target/mcse-nyc-trips-0.0.1-SNAPSHOT.jar 
 
 2. OR, using Spring boot maven plugin
-
-   mvn spring-boot:run
+	
+	mvn spring-boot:run
 
 #### Restful API End points
 
@@ -89,5 +89,3 @@ Get trip metrics by day of week cost between two locations (Sunday to Saturday)
    dropoff_id - drop off location id <br />
    pickup_date  - pickup date (yyyy-MM-dd) <br/>
    dropoff_date  - drop off date (yyyy-MM-dd)
-   
-See additional information [Notes](Notes.md).
