@@ -68,9 +68,17 @@ Find trips by query parameters with sort ascending option
 
 	GET /api/trips?axi_type=&pickup_id=&dropoff_id=&pickup_date=&dropoff_date=&sort=taxi_type,asc
 
-Trip metrics
+Get trip metrics by cost between two locations
 		
-	GET /api/trips/metrics?name=&pickup_id=&dropoff_id=
+	GET /api/trips/metrics?name=cost&pickup_id=&dropoff_id=
+
+Get trip metrics by hour of day cost between two locations (1 to 23)
+		
+	GET /api/trips/metrics?name=hour&pickup_id=&dropoff_id=
+	
+Get trip metrics by day of week cost between two locations (Sunday to Saturday)
+		
+	GET /api/trips/metrics?name=day&pickup_id=&dropoff_id=
      
 ##### Query parameters
    taxi_type: type of taxi vehicle(green, yellow, rfv)<br />
