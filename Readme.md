@@ -53,7 +53,7 @@ To build the code locally
 
 The jar application is running in my Azure VM server with MongoBD server for user testing. 
 
- - API Host - http://nyctaxi.api.tunkz.net:8080
+ - API Host - http://nyctaxi.api.tunkz.net:8080  Use curl, Postman or other clients tools to send requests.
 
 Find location zone by borough or zone 
 	
