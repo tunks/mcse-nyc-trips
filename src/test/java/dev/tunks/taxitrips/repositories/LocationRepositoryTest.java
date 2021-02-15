@@ -21,7 +21,6 @@ import org.springframework.data.mongodb.core.query.Query;
 import org.springframework.data.mongodb.core.query.Term;
 import org.springframework.data.mongodb.core.query.TextCriteria;
 import org.springframework.test.context.ActiveProfiles;
-
 import dev.tunks.taxitrips.TaxitripServiceApplication;
 import dev.tunks.taxitrips.model.Location;
 import static dev.tunks.taxitrips.utils.DummyDataUtil.*;

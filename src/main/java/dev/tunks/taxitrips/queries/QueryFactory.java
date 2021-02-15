@@ -44,13 +44,10 @@ public class QueryFactory {
 			}
 			switch(name.toLowerCase()) {
 			  case "cost":
-			  case "by_cost":
 				 return MetricsName.COST;
 			  case "day":
-			  case "by_day":
 				  return MetricsName.DAY_OF_WEEK;
 			  case "hour":
-			  case "by_hour":
 				  return MetricsName.HOUR_OF_DAY; 
 			  default:
 				  return null;
