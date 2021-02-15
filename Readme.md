@@ -78,7 +78,7 @@ Find trips by query parameters
 
 Find trips by query parameters with sort ascending option
 
-	GET /api/trips?axi_type=&pickup_id=&dropoff_id=&pickup_date=&dropoff_date=&sort=taxi_type,asc
+	GET /api/trips?taxi_type=&pickup_id=&dropoff_id=&pickup_date=&dropoff_date=&sort=taxi_type,asc
 	GET http://nyctaxi.api.tunkz.net:8080/api/trips?axi_type=&pickup_id=...&sort=taxi_type,asc
 
 Get trip metrics by cost between two locations
@@ -105,7 +105,8 @@ Get trip metrics by day of week cost between two locations (Sunday to Saturday)
   
 #### Future Improvements
  - Use SwaggerUI to generate and document the API endpoints for users
- - More comments
+ - More comments:
+ - Exception handling
  - Scalability: use of multiple applications instances behind a load balancer, database shading and replications
  - CD/CD : Use container images and Kubernetes for automatic deployment
  - Performance: caching of query results, pre-computation of the metrics by a separate application or job
