@@ -32,8 +32,7 @@ The batch data processor is in a separate Github repository [tunks/msce-tlc-data
 
 Junit5 unit cases are implemented as part of the code to test the required features
 
-###Endpoints
-
+     
 ### Build
 Build the project with the test unit using Apache maven
 
@@ -47,3 +46,5 @@ Build the project with the test unit using Apache maven
 2. OR, using Spring boot maven plugin
 
    mvn spring-boot:run
+
+See additional information [Notes](Notes.md).
