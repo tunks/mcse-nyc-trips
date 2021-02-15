@@ -152,7 +152,7 @@ public class QueryParams {
 			
 			public QueryParamsBuilder setTaxiType(String taxiType) {
 				if(taxiType != null) {
-				   queryParams.setTaxiType(taxiType);
+				   queryParams.setTaxiType(TaxiType.getValue(taxiType).toString());
 				}
 				return this;
 		    }
